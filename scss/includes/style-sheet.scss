@@ -1,0 +1,83 @@
+@use "sass:color";
+
+@use "../vars/vars";
+@use "../vars/vars-night";
+
+/* Chrome, Safari, Edge (WebKit/Blink) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+	text-align: center;
+}
+
+/* Firefox */
+input[type="number"] {
+	appearance: textfield;
+	-moz-appearance: textfield;
+	text-align: center;
+}
+
+@layer vetools {
+
+	.sheet__page {
+		max-width: 1600px;
+		margin: auto;
+		padding: 20px;
+	}
+
+	.sheet__row {
+		display: flex;
+		gap: 10px;
+		margin-bottom: 12px;
+	}
+
+	.sheet__col {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.sheet__box-info {
+		padding: 8px;
+		font-size: 18px;
+		background-color: #525151;
+	}
+
+	.sheet__box-stat {
+		border: 2px solid;
+		padding: 6px;
+		border-radius: 4px;
+		font-size: 16px;
+		text-align: center;
+		align-items: center;
+	}
+
+	.label {
+		font-size: 12px;
+		margin-bottom: 4px;
+	}
+
+	.sheet__box-stat,
+	.sheet__box-stat:hover,
+	.sheet__box-stat:active,
+	.sheet__box-stat:focus,
+	.ve-night-mode .sheet__box-stat,
+	.ve-night-mode .sheet__box-stat:hover,
+	.ve-night-mode .sheet__box-stat:active,
+	.ve-night-mode .sheet__box-stat:focus {
+		border-color: #1e90ff;
+	}
+
+	.sheet__space {
+		width: 10px;
+	}
+
+	.sheet__dependant {
+		border: 1px solid #555;
+		background: #222;
+		padding: 6px;
+		border-radius: 4px;
+		color: #ccc;
+	}
+}

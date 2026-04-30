@@ -86,6 +86,12 @@
 		text-decoration-color: #9400d3;
 	}
 
+	.home__h-cc {
+		text-decoration: underline;
+		text-decoration-color: #d29a38;
+		width: 1142px;
+	}
+
 	.home__btn-player,
 	.home__btn-player:hover,
 	.home__btn-player:active,
@@ -122,6 +128,19 @@
 		color: #9400d3;
 	}
 
+	.home__btn-cc,
+	.home__btn-cc:hover,
+	.home__btn-cc:active,
+	.home__btn-cc:focus,
+	.ve-night-mode .home__btn-cc,
+	.ve-night-mode .home__btn-cc:hover,
+	.ve-night-mode .home__btn-cc:active,
+	.ve-night-mode .home__btn-cc:focus {
+		border-color: #d29a38;
+		color: #d29a38;
+		width:1142px;
+	}
+
 	.home__stripe {
 		display: flex;
 		flex-direction: column;
@@ -149,6 +168,10 @@
 
 	.home__split-spaced--gutter {
 		margin-right: 10px;
+	}
+
+	.home__split-spaced--gutter-cc {
+		margin-right: -10px;
 	}
 
 	.home__wrp-buttons {
