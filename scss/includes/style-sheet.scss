@@ -9,6 +9,8 @@ input[type="number"]::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 	text-align: center;
+	position: relative;
+	z-index: 2;
 }
 
 /* Firefox */
@@ -16,6 +18,8 @@ input[type="number"] {
 	appearance: textfield;
 	-moz-appearance: textfield;
 	text-align: center;
+	position: relative;
+	z-index: 2;
 }
 
 @layer vetools {
@@ -39,9 +43,10 @@ input[type="number"] {
 	}
 
 	.sheet__box-info {
+		border: 2px solid;
 		padding: 8px;
 		font-size: 18px;
-		background-color: #525151;
+		background-color: #333333;
 	}
 
 	.sheet__box-stat {
@@ -51,6 +56,7 @@ input[type="number"] {
 		font-size: 16px;
 		text-align: center;
 		align-items: center;
+		background-color: #1c1d1c;
 	}
 
 	.label {
@@ -69,10 +75,29 @@ input[type="number"] {
 		border-color: #1e90ff;
 	}
 
-	.sheet__space {
-		width: 10px;
+	.sheet__box-collapsible {
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		display: none;
+		overflow: hidden;
 	}
 
+	.sheet__box-btn {
+		padding: 4px;
+		margin-top: 4px;
+	}
+
+	.sheet__box-abl {
+		border-bottom: 1px solid;
+		flex-direction: row;
+		padding: 0px;
+		text-align: left;
+		font-size: 8;
+	}
+
+	.active, .sheet__box-btn:hover {
+		color:#fff;
+	}
 	.sheet__dependant {
 		border: 1px solid #555;
 		background: #222;
@@ -80,4 +105,24 @@ input[type="number"] {
 		border-radius: 4px;
 		color: #ccc;
 	}
+
+	.sheet__dependant-stat {
+		border: 1px solid #555;
+		background: #222;
+		padding: 6px;
+		border-radius: 4px;
+		color: #ccc;
+		margin-bottom: -4px;
+		pointer-events:none;
+	}
+
+	.sheet__dependant-abl {
+		border: 1px solid #555;
+		background: #222;
+		padding: 2px;
+		border-radius: 4px;
+		color: #ccc;
+		align-items: right;
+	}
+
 }

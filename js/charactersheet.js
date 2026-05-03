@@ -12,6 +12,17 @@ function getStatBonus(stat) {
   return Math.floor((stat - 10) / 2);
 }
 
+class CharacterSheet {
+  static _init() {
+    this._initStats();
+  }
+
+  static _initStats() {
+
+  }
+}
+
+
 const levelInput = document.getElementById("level");
 const strInput = document.getElementById("str");
 const dexInput = document.getElementById("dex");
@@ -26,6 +37,23 @@ const conDisplay = document.getElementById("conBonus");
 const intDisplay = document.getElementById("intBonus");
 const wisDisplay = document.getElementById("wisBonus");
 const chaDisplay = document.getElementById("chaBonus");
+
+var statBox = document.getElementsByClassName("sheet__box-btn");
+var i;
+
+for (i = 0; i < statBox.length; i++) {
+  statBox[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var collapsible = this.previousElementSibling;
+    if (collapsible.style.display === "block") {
+      collapsible.style.display = "none";
+    } else {
+      collapsible.style.display = "block";
+    }
+  });
+}
+
+
 
 function renderProfBonus() {
   const level = Number(levelInput.value);

@@ -99,7 +99,6 @@
 				<input style="text-align: center;" id="background" type="text">
 			</div>
 
-
 			<div class="sheet__col">
 				<label>Level</label>
 				<input id="level" type="number" min="1" max="20" value="1">
@@ -110,72 +109,77 @@
 	<!-- Body Row -->
 	<div class="sheet__row">
 		<!-- Stats -->
-		<div class="sheet__col">
+		<div class="view-col">
 			<div class="sheet__box-stat">
-				<div class="sheet__col">
-					<label>STR</label>
-					<div id="strBonus" class="sheet__dependant"></div>
-					<input id="str" type="number" min="1" max="30" value="8">
-				</div>
+				<label>STR</label>
+				<div id="strBonus" class="sheet__dependant-stat"></div>
+				<input id="str" type="number" min="1" max="30" value="8">
 			</div>
 		</div>
-		<div class="sheet__col">
+		<div class="view-col">
 			<div class="sheet__box-stat">
-				<div class="sheet__col">
-					<label>DEX</label>
-					<div id="dexBonus" class="sheet__dependant"></div>
-					<input id="dex" type="number" min="1" max="30" value="8">
-				</div>
+				<label>DEX</label>
+				<div id="dexBonus" class="sheet__dependant-stat"></div>
+				<input id="dex" type="number" min="1" max="30" value="8">
 			</div>
 		</div>
-		<div class="sheet__col">
+		<div class="view-col">
 			<div class="sheet__box-stat">
-				<div class="sheet__col">
-					<label>CON</label>
-					<div id="conBonus" class="sheet__dependant"></div>
-					<input id="con" type="number" min="1" max="30" value="8">
-				</div>
+				<label>CON</label>
+				<div id="conBonus" class="sheet__dependant-stat"></div>
+				<input id="con" type="number" min="1" max="30" value="8">
 			</div>
 		</div>
-		<div class="sheet__col">
+		<div class="view-col">
 			<div class="sheet__box-stat">
-				<div class="sheet__col">
-					<label>INT</label>
-					<div id="intBonus" class="sheet__dependant"></div>
-					<input id="int" type="number" min="1" max="30" value="8">
-				</div>
+				<label>INT</label>
+				<div id="intBonus" class="sheet__dependant-stat"></div>
+				<input id="int" type="number" min="1" max="30" value="8">
 			</div>
 		</div>
-		<div class="sheet__col">
+		<div class="view-col">
 			<div class="sheet__box-stat">
-				<div class="sheet__col">
-					<label>WIS</label>
-					<div id="wisBonus" class="sheet__dependant"></div>
-					<input id="wis" type="number" min="1" max="30" value="8">
-				</div>
+				<label>WIS</label>
+				<div id="wisBonus" class="sheet__dependant-stat"></div>
+				<input id="wis" type="number" min="1" max="30" value="8">
 			</div>
 		</div>
-		<div class="sheet__col">
+		<div class="view-col">
 			<div class="sheet__box-stat">
-				<div class="sheet__col">
-					<label>CHA</label>
-					<div id="chaBonus" class="sheet__dependant"></div>
-					<input id="cha" type="number" min="1" max="30" value="8">
+				<label>CHA</label>
+				<div id="chaBonus" class="sheet__dependant-stat"></div>
+				<input id="cha" type="number" min="1" max="30" value="8">
+
+				<div class="sheet__box-abl">
+					<span>[ ]</span>
+					<span>Saving Throw</span>
+					<span class="sheet__dependant-abl" align-self="right"></span>
 				</div>
-				
+				<div class="sheet__box-collapsible">
+					<div class="sheet__box-abl">
+						<span>[ ]</span>
+						<span>Deception</span>
+						<span class="sheet__dependant-abl"></span>
+					</div>
+				</div>
+				<div class="sheet__box-btn">
+					<label>Abilities</label>
+					<span class="caret "></span>
+				</div>
 			</div>
+
 		</div>
 
-		<div width="10"></div>
+		<div class="ve-p-3"></div>
 
-		<div class="sheet__col">
+		<div class="view-col">
 			<div class="sheet__box-stat">
 				<label>PROFICIENCY</label>
 				<div id="profBonus" class="sheet__dependant"></div>
 				<label>BONUS</label>
 			</div>
 		</div>
-		<div class="sheet__col">
+		<div class="view-col">
 			<div class="sheet__box-stat">
 				<label>ARMOR</label>
 				<div id="armorClass" class="sheet__dependant"></div>
