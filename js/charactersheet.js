@@ -15,10 +15,30 @@ function getStatBonus(stat) {
 class CharacterSheet {
   static _init() {
     this._initStats();
+    this._initDropdown();
   }
 
   static _initStats() {
 
+  }
+  static _initDropdown() {
+    var statBoxBtn = document.getElementsByClassName("sheet__box-btn");
+    var i;
+
+    for (i = 0; i < statBoxBtn.length; i++) {
+      statBoxBtn[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var collapsible = this.previousElementSibling;
+        var caret_btn = this.lastElementChild;
+        if (collapsible.style.display === "block") {
+          collapsible.style.display = "none";
+          caret_btn.style.transform = "rotate(0deg)";
+        } else {
+          collapsible.style.display = "block";
+          caret_btn.style.transform = "rotate(180deg)";
+        }
+      });
+    }
   }
 }
 
@@ -37,21 +57,6 @@ const conDisplay = document.getElementById("conBonus");
 const intDisplay = document.getElementById("intBonus");
 const wisDisplay = document.getElementById("wisBonus");
 const chaDisplay = document.getElementById("chaBonus");
-
-var statBox = document.getElementsByClassName("sheet__box-btn");
-var i;
-
-for (i = 0; i < statBox.length; i++) {
-  statBox[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var collapsible = this.previousElementSibling;
-    if (collapsible.style.display === "block") {
-      collapsible.style.display = "none";
-    } else {
-      collapsible.style.display = "block";
-    }
-  });
-}
 
 
 
@@ -129,3 +134,5 @@ function render() {
 }
 
 render();
+
+CharacterSheet._init();

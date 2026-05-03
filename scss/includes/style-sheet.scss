@@ -85,14 +85,16 @@ input[type="number"] {
 	.sheet__box-btn {
 		padding: 4px;
 		margin-top: 4px;
+		
 	}
+
 
 	.sheet__box-abl {
 		border-bottom: 1px solid;
 		flex-direction: row;
 		padding: 0px;
 		text-align: left;
-		font-size: 8;
+
 	}
 
 	.active, .sheet__box-btn:hover {
