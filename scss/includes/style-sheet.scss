@@ -24,107 +24,94 @@ input[type="number"] {
 
 @layer vetools {
 
-	.sheet__page {
-		max-width: 1600px;
-		margin: auto;
-		padding: 20px;
+	.sheet__ {
+		&page {
+			max-width: 2560px;
+			margin: auto;
+			padding: 20px;
+		}
+
+		&box {
+			border: 2px solid;
+			padding: 6px;
+			border-radius: 4px;
+			font-size: 18px;
+			background-color: #1c1c1c;
+			border-color:#ff8d1e;
+
+			&-stat {
+				border: 2px solid;
+				padding: 6px;
+				border-radius: 4px;
+				font-size: 16px;
+				text-align: center;
+				align-items: center;
+				background-color: #1c1d1c;
+				border-color: #1e90ff;
+			}
+
+			&-collapsible {
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+				display: none;
+				overflow: hidden;
+			}
+
+			&-btn {
+				padding: 4px;
+				margin-top: 4px;
+			}
+
+			&-btn:hover {
+				color:#fff;
+			}
+
+			&-abl {
+				border-bottom: 1px solid;
+				display:flex;
+				flex-direction:row;
+				justify-content: space-between;
+				align-items: center;
+				padding: 2px;
+				border-color:#555;
+				height:32px;
+			}
+
+			&-abl span:last-child {
+				margin-left: auto;
+			}
+		}
+
+		&dependant {
+			border: 1px solid #555;
+			background: #222;
+			padding: 6px;
+			border-radius: 4px;
+			color: #ccc;
+
+			&-stat {
+				border: 1px solid #555;
+				background: #222;
+				padding: 6px;
+				border-radius: 4px;
+				color: #ccc;
+				margin-bottom: -4px;
+				align-self:center;
+			}
+
+			&-abl {
+				border: 1px solid #555;
+				background: #222;
+				padding: 2px;
+				border-radius: 8px;
+				color: #ccc;
+			}
+		}
+
+		&input {
+			&-stat {
+				border-radius:40%;
+			}
+		}
 	}
-
-	.sheet__row {
-		display: flex;
-		gap: 10px;
-		margin-bottom: 12px;
-	}
-
-	.sheet__col {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.sheet__box-info {
-		border: 2px solid;
-		padding: 8px;
-		font-size: 18px;
-		background-color: #333333;
-	}
-
-	.sheet__box-stat {
-		border: 2px solid;
-		padding: 6px;
-		border-radius: 4px;
-		font-size: 16px;
-		text-align: center;
-		align-items: center;
-		background-color: #1c1d1c;
-	}
-
-	.label {
-		font-size: 12px;
-		margin-bottom: 4px;
-	}
-
-	.sheet__box-stat,
-	.sheet__box-stat:hover,
-	.sheet__box-stat:active,
-	.sheet__box-stat:focus,
-	.ve-night-mode .sheet__box-stat,
-	.ve-night-mode .sheet__box-stat:hover,
-	.ve-night-mode .sheet__box-stat:active,
-	.ve-night-mode .sheet__box-stat:focus {
-		border-color: #1e90ff;
-	}
-
-	.sheet__box-collapsible {
-		border-bottom-left-radius: 4px;
-		border-bottom-right-radius: 4px;
-		display: none;
-		overflow: hidden;
-	}
-
-	.sheet__box-btn {
-		padding: 4px;
-		margin-top: 4px;
-		
-	}
-
-
-	.sheet__box-abl {
-		border-bottom: 1px solid;
-		flex-direction: row;
-		padding: 0px;
-		text-align: left;
-
-	}
-
-	.active, .sheet__box-btn:hover {
-		color:#fff;
-	}
-	.sheet__dependant {
-		border: 1px solid #555;
-		background: #222;
-		padding: 6px;
-		border-radius: 4px;
-		color: #ccc;
-	}
-
-	.sheet__dependant-stat {
-		border: 1px solid #555;
-		background: #222;
-		padding: 6px;
-		border-radius: 4px;
-		color: #ccc;
-		margin-bottom: -4px;
-		pointer-events:none;
-	}
-
-	.sheet__dependant-abl {
-		border: 1px solid #555;
-		background: #222;
-		padding: 2px;
-		border-radius: 4px;
-		color: #ccc;
-		align-items: right;
-	}
-
 }
