@@ -70,126 +70,73 @@
 </nav>
 
 <div class="sheet__page CharacterSheet">
-
-	<!-- Info Header -->
-	<div class="sheet__box">
-		<div class="view-col-wrapper">
-			<div class="view-col">
-				<label>NAME</label>
-				<input style="text-align: center;" id="name" type="text">
-			</div>
-
-			<div class="view-col">
-				<label>SPECIES</label>
-				<input style="text-align: center;" id="species" type="text">
-			</div>
-
-			<div class="view-col">
-				<label>BACKGROUND</label>
-				<input style="text-align: center;" id="background" type="text">
-			</div>
-			<div class="sheet__box">
-				<div class="view-col-wrapper">
-					<div class="view-col">
-						<label>CLASS</label>
-						<input style="text-align: center;" id="class" type="text">
-					</div>
-
-					<div class="view-col">
-						<label>SUBCLASS</label>
-						<input style="text-align: center;" id="subclass" type="text">
-					</div>
-
-					<div class="view-col">
-						<label>LEVEL</label>
-						<input id="level" type="number" min="1" max="20" value="1">
-					</div>
-				</div>
-			</div>
+	<div class="sheet__page-grid">
+		<div class="sheet__box sheet__box-info info">
+			<label class="ve-small">NAME SPECIES BACKGROUND</label>
 		</div>
-	</div>
-	
-	<!-- Body Row -->
-	<div class="view-col-wrapper">
-		<!-- Stats -->
-		<div class="view-col">
-			<div class="sheet__box-stat">
-				<label class="ve-small">STRENGTH</label>
-				<div id="strBonus" class="sheet__dependant-stat"></div>
-				<input id="str" class="sheet__input-stat" type="number" min="1" max="30" value="8">
-			</div>
+		<div class="sheet__box sheet__box-info class">
+			<label class="ve-small">CLASS SUBCLASS LEVEL</label>
 		</div>
-		<div class="view-col">
-			<div class="sheet__box-stat">
-				<label class="ve-small">DEXTERITY</label>
-				<div id="dexBonus" class="sheet__dependant-stat"></div>
-				<input id="dex" class="sheet__input-stat" type="number" min="1" max="30" value="8">
-			</div>
+		<div class="sheet__box sheet__box-roll str">
+			<label class="ve-small">STRENGTH</label>
+			<div>one</div>
+			<div>two</div>
+			<div>three</div>
 		</div>
-		<div class="view-col">
-			<div class="sheet__box-stat">
-				<label class="ve-small">CONSTITUTION</label>
-				<div id="conBonus" class="sheet__dependant-stat"></div>
-				<input id="con" class="sheet__input-stat" type="number" min="1" max="30" value="8">
-			</div>
+		<div class="sheet__box sheet__box-roll dex">
+			<label class="ve-small">DEXTERITY</label>
 		</div>
-		<div class="view-col">
-			<div class="sheet__box-stat">
-				<label class="ve-small">INTELLIGENCE</label>
-				<div id="intBonus" class="sheet__dependant-stat"></div>
-				<input id="int" class="sheet__input-stat" type="number" min="1" max="30" value="8">
-			</div>
+		<div class="sheet__box sheet__box-roll con">
+			<label class="ve-small">CONSTITUTION</label>
 		</div>
-		<div class="view-col">
-			<div class="sheet__box-stat">
-				<label class="ve-small">WISDOM</label>
-				<div id="wisBonus" class="sheet__dependant-stat"></div>
-				<input id="wis" class="sheet__input-stat" type="number" min="1" max="30" value="8">
-			</div>
+		<div class="sheet__box sheet__box-roll int">
+			<label class="ve-small">INTELLIGENCE</label>
 		</div>
-		<div class="view-col">
-			<div class="sheet__box-stat">
-				<label class="ve-small">CHARISMA</label>
-				<div id="chaBonus" class="sheet__dependant-stat"></div>
-				<input id="cha" class="sheet__input-stat" type="number" min="1" max="30" value="8">
-
-				<div class="sheet__box-abl">
-					<span class="sheet__prof-btn ve-small">SAVING THROW</span>
-					<span class="sheet__dependant-abl ve-w-20">2</span>
-				</div>
-				<div class="sheet__box-collapsible">
-					<div class="sheet__box-abl">
-						<span class="sheet__prof-btn ve-small">ANIMAL HANDLING</span>
-						<span class="sheet__dependant-abl ve-w-20">+2</span>
-					</div>
-				</div>
-				<div class="sheet__box-btn">
-					<label class="ve-small">ABILITIES</label>
-					<span class="caret"></span>
-				</div>
-			</div>
-
+		<div class="sheet__box sheet__box-roll wis">
+			<label class="ve-small">WISDOM</label>
 		</div>
-
-		<div class="ve-p-3"></div>
-
-		<div class="view-col">
-			<div class="sheet__box-stat">
-				<label class="ve-small">PROFICIENCY</label>
-				<div id="profBonus" class="sheet__dependant"></div>
-				<label class="ve-small">BONUS</label>
-			</div>
+		<div class="sheet__box sheet__box-roll cha">
+			<label class="ve-small">CHARISMA</label>
 		</div>
-		<div class="view-col">
-			<div class="sheet__box-stat">
-				<label class="ve-small">ARMOR</label>
-				<div id="armorClass" class="sheet__dependant"></div>
-				<label class="ve-small">CLASS</label>
-			</div>
+		<div class="sheet__box sheet__box-ninp prof">
+			<label class="ve-small">PROFICIENCY BONUS</label>
 		</div>
+		<div class="sheet__box sheet__box-ninp speed">
+			<label class="ve-small">WALKING SPEED</label>
+		</div>
+		<div class="sheet__box sheet__box-ninp init">
+			<label class="ve-small">INITIATIVE</label>
+		</div>
+		<div class="sheet__box sheet__box-ninp ac">
+			<label class="ve-small">ARMOR CLASS</label>
+		</div>
+		<div class="sheet__box sheet__box-insp insp">
+			<label class="ve-small">HEROIC INSPIRATION</label>
+		</div>
+		<div class="sheet__box sheet__box-ninp hp">
+			<label class="ve-small">HIT POINTS + LIFE</label>
+		</div>
+		<div class="sheet__box sheet__box-roll sav">
+			<label class="ve-small">SAVES</label>
+		</div>
+		<div class="sheet__box sheet__box-roll sen">
+			<label class="ve-small">SENSES</label>
+		</div>
+		<div class="sheet__box sheet__box-disp trn">
+			<label class="ve-small">PROFICIENCIES + TRAINING</label>
+		</div>
+		<div class="sheet__box sheet__box-roll abl">
+			<label class="ve-small">ABILITIES</label>
+		</div>
+		<div class="sheet__box sheet__box-disp defcon">
+			<label class="ve-small">DEFENSES AND CONDITIONS</label>
+		</div>
+		<div class="sheet__box sheet__box-ninp big">
+			<label class="ve-small">EVERYTHING ELSE</label>
+		</div>
+		
 	</div>
 </div>
-
 <!--5ETOOLS_SCRIPT_ANCHOR-->
 <!--5ETOOLS_AD_ADHESION-->
 

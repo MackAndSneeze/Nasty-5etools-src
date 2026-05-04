@@ -25,29 +25,197 @@ input[type="number"] {
 @layer vetools {
 
 	.sheet__ {
+
 		&page {
-			max-width: 2560px;
-			margin: auto;
+			display:flex;
+			width: 100%;
+			max-width: 1920px;
+
+			box-sizing: border-box;
+			margin: 0 auto;
 			padding: 20px;
+			justify-content: center;
+			align-items: center;
+
+			&-grid {
+				display:grid;
+				grid-template-areas:
+					"info info info info info info info class class class class class"
+					"str dex con int wis cha prof speed insp hp hp hp"
+					"sav sav sav abl abl abl init ac defcon defcon defcon defcon"
+					"sav sav sav abl abl abl big big big big big big"
+					"sen sen sen abl abl abl big big big big big big"
+					"sen sen sen abl abl abl big big big big big big"
+					"trn trn trn abl abl abl big big big big big big"
+					"trn trn trn abl abl abl big big big big big big"
+					"trn trn trn abl abl abl big big big big big big";
+				grid-template-columns: repeat(12, 1fr);
+				grid-template-rows: repeat(9, 1fr);
+				gap: 10px;
+
+				width:100%;
+				height:100%;
+			}
+
+			&-grid div.info {
+				grid-area: info;
+			}
+
+			&-grid div.nam {
+				grid-area: nam;
+			}
+
+			&-grid div.spc {
+				grid-area: spc;
+			}
+
+			&-grid div.bgr {
+				grid-area: bgr;
+			}
+
+			&-grid div.class {
+				grid-area: class;
+			}
+
+			&-grid div.str {
+				grid-area: str;
+			}
+
+			&-grid div.dex {
+				grid-area: dex;
+			}
+
+			&-grid div.con {
+				grid-area: con;
+			}
+
+			&-grid div.int {
+				grid-area: int;
+			}
+
+			&-grid div.wis {
+				grid-area: wis;
+			}
+
+			&-grid div.cha {
+				grid-area: cha;
+			}
+
+			&-grid div.prof {
+				grid-area: prof;
+			}
+
+			&-grid div.speed {
+				grid-area: speed;
+			}
+
+			&-grid div.insp {
+				grid-area: insp;
+			}
+
+			&-grid div.hp {
+				grid-area: hp;
+			}
+
+			&-grid div.sav {
+				grid-area: sav;
+			}
+
+			&-grid div.sen {
+				grid-area: sen;
+			}
+
+			&-grid div.trn {
+				grid-area: trn;
+			}
+
+			&-grid div.abl {
+				grid-area: abl;
+			}
+
+			&-grid div.init {
+				grid-area: init;
+			}
+
+			&-grid div.ac {
+				grid-area: ac;
+			}
+
+			&-grid div.defcon {
+				grid-area: defcon;
+			}
+
+			&-grid div.big {
+				grid-area: big;
+			}
 		}
 
-		&box {
-			border: 2px solid;
-			padding: 6px;
-			border-radius: 4px;
-			font-size: 18px;
-			background-color: #1c1c1c;
-			border-color:#d29a38;
 
-			&-stat {
-				border: 2px solid;
-				padding: 6px;
-				border-radius: 4px;
-				font-size: 16px;
-				text-align: center;
-				align-items: center;
-				background-color: #1c1d1c;
+
+		&row {
+			display:flex;
+			flex-direction:row;
+			max-height: 100%;
+			height: 100%;
+			min-height: 0;
+			align-items:center;
+			width:100%;
+			height:100%;
+			padding-top:2px;
+			padding-bottom:2px;
+		}
+
+		&col {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width:100%;
+			height:100%;
+			padding-left:2px;
+			padding-right:2px;
+		}
+
+		// Box Pallate:
+		// #1e90ff
+		// #0077ea
+		// #1efffd
+
+		&box {
+			padding: 6px;
+			font-size: 16px;
+			text-align: center;
+			align-items: center;
+
+			&-info {
+				border: 3px solid;
+				border-radius: 0%;
+				font-size: 18px;
+				border-color:#d29a38;
+			}
+
+			&-roll {
+				border: 3px solid;
 				border-color: #1e90ff;
+				border-radius: 6px;
+			}
+
+			&-ninp {
+				border: 4px double;
+				border-color: #1e90ff;
+				border-radius: 8px;
+			}
+
+			&-disp {
+				border: 4px groove;
+				border-color: #1e90ff;
+				border-radius: 4px;
+			}
+
+			&-insp {
+				border: 4px groove;
+				border-color: #1e90ff;
+				border-radius: 40%;
 			}
 
 			&-collapsible {
