@@ -194,8 +194,8 @@ input[type="number"] {
 					justify-self: center;
 					border: 2px solid;
 					border-radius: 6px;
-					border-color:#d29a38;
-					aspect-ratio: 1 / 2;
+					border-color:#d29a38bb;
+					aspect-ratio: 1 / 1;
 					height: 128px;
 				}
 			}
@@ -285,14 +285,14 @@ input[type="number"] {
 		&input {
 			&-name {
 				border: 2px solid;
-				border-color:#d29a38;
+				border-color:#d29a38bb;
 				border-radius: 2px;
 				font-size:200%;
 			}
 
 			&-details {
 				border: 2px solid;
-				border-color:#d29a38;
+				border-color:#d29a38bb;
 				border-radius: 2px;
 				font-size:120%;
 			}
