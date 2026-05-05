@@ -42,19 +42,16 @@ input[type="number"] {
 				grid-template-areas:
 					"info info info info info info info class class class class class"
 					"str dex con int wis cha prof speed insp hp hp hp"
-					"sav sav sav abl abl abl init ac defcon defcon defcon defcon"
-					"sav sav sav abl abl abl big big big big big big"
-					"sen sen sen abl abl abl big big big big big big"
-					"sen sen sen abl abl abl big big big big big big"
-					"trn trn trn abl abl abl big big big big big big"
-					"trn trn trn abl abl abl big big big big big big"
-					"trn trn trn abl abl abl big big big big big big";
+					"sav sav sav skl skl skl init ac defcon defcon defcon defcon"
+					"sav sav sav skl skl skl big big big big big big"
+					"sen sen sen skl skl skl big big big big big big"
+					"sen sen sen skl skl skl big big big big big big"
+					"trn trn trn skl skl skl big big big big big big"
+					"trn trn trn skl skl skl big big big big big big"
+					"trn trn trn skl skl skl big big big big big big";
 				grid-template-columns: repeat(12, 1fr);
-				grid-template-rows: repeat(9, 1fr);
+				grid-auto-rows: 1fr;
 				gap: 10px;
-
-				width:100%;
-				height:100%;
 			}
 
 			&-grid div.info {
@@ -129,8 +126,8 @@ input[type="number"] {
 				grid-area: trn;
 			}
 
-			&-grid div.abl {
-				grid-area: abl;
+			&-grid div.skl {
+				grid-area: skl;
 			}
 
 			&-grid div.init {
@@ -150,48 +147,57 @@ input[type="number"] {
 			}
 		}
 
-
-
-		&row {
-			display:flex;
-			flex-direction:row;
-			max-height: 100%;
-			height: 100%;
-			min-height: 0;
-			align-items:center;
-			width:100%;
-			height:100%;
-			padding-top:2px;
-			padding-bottom:2px;
-		}
-
-		&col {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			width:100%;
-			height:100%;
-			padding-left:2px;
-			padding-right:2px;
-		}
-
 		// Box Pallate:
 		// #1e90ff
 		// #0077ea
 		// #1efffd
 
 		&box {
-			padding: 6px;
 			font-size: 16px;
 			text-align: center;
-			align-items: center;
 
 			&-info {
+				padding: 4px;
 				border: 3px solid;
 				border-radius: 0%;
 				font-size: 18px;
 				border-color:#d29a38;
+
+				&-grid {
+					display:grid;
+					grid-template-areas:
+						"port name name name name name name"
+						"port spec spec spec back back back";
+					grid-template-columns: repeat(7, 1fr);
+					grid-template-rows: repeat(2, 1fr);
+					gap: 8px;
+					height: 100%
+				}
+
+				&-grid div.port {
+					grid-area: port;
+				}
+
+				&-grid input.name {
+					grid-area: name;
+				}
+
+				&-grid input.spec {
+					grid-area: spec;
+				}
+
+				&-grid input.back {
+					grid-area: back;
+				}
+
+				&-portrait {
+					justify-self: center;
+					border: 2px solid;
+					border-radius: 6px;
+					border-color:#d29a38;
+					aspect-ratio: 1 / 2;
+					height: 128px;
+				}
 			}
 
 			&-roll {
@@ -277,6 +283,20 @@ input[type="number"] {
 		}
 
 		&input {
+			&-name {
+				border: 2px solid;
+				border-color:#d29a38;
+				border-radius: 2px;
+				font-size:200%;
+			}
+
+			&-details {
+				border: 2px solid;
+				border-color:#d29a38;
+				border-radius: 2px;
+				font-size:120%;
+			}
+
 			&-stat {
 				border-radius:40%;
 			}
